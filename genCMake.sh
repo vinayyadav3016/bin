@@ -25,6 +25,10 @@ str=""
 case $1 in
   avr)
     str="-DCMAKE_TOOLCHAIN_FILE=~/cmakefiles/avr-toolchain.cmake"
+    mkdir -p ../bin/eep
+    mkdir -p ../bin/elf
+    mkdir -p ../bin/hex
+    mkdir -p ../bin/map
     cmake "${str}" $@ ..
     make
     shift
