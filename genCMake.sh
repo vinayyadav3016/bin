@@ -35,9 +35,9 @@ case $1 in
     ;;
   arm)
     str="-DCMAKE_TOOLCHAIN_FILE=~/cmakefiles/arm-toolchain.cmake"
-    source ${PROJECTS}/ros-projects-arm/env-arm-ros.sh
+    #source ${PROJECTS}/ros-projects-arm/env-arm-ros.sh
     cmake "${str}" $@ ..
-    make
+    #make
     shift
     ;;
   pc)
