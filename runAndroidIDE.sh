@@ -57,7 +57,7 @@ createValuesEditorWindow()
 createManifestEditorWindow()
 {
 	tmux set-option default-path ${1}/
-	tmux new-window -n "Manifest Editor" "vim" # "cd ${1}/codes/python/"
+	tmux new-window -n "Editor" "vim" # "cd ${1}/codes/python/"
 	#tmux split-window -h #"vim" 
 }
 
@@ -79,9 +79,9 @@ then
 			createSession "$1"
 			createRunWindow "$1"
 			createManifestEditorWindow "$1"
-			createCodeEditorWindow "$1"
-			createLayoutEditorWindow "$1"
-			createValuesEditorWindow "$1"
+			#createCodeEditorWindow "$1"
+			#createLayoutEditorWindow "$1"
+			#createValuesEditorWindow "$1"
 			attachSession "$1"
 		else
 			echo "Project $1 do not exists!!!!"
