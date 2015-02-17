@@ -4,12 +4,13 @@ createSession()
 {
 	tmux new-session -d -s $1 
 	#sleep 5
-	tmux rename-window "Home : ${1}"
+	tmux rename-window "Run Window : ${1}"
 	tmux set-option default-path ${1}/
 	tmux split-window -h
 	tmux select-pane -L
 	tmux kill-pane 
 	tmux split-window -h
+	tmux split-window -d "top"
 }
 
 sessionExists()
@@ -77,8 +78,8 @@ then
 		if [[ -d "$1" ]]
 		then
 			createSession "$1"
-			createRunWindow "$1"
-			createManifestEditorWindow "$1"
+			#createRunWindow "$1"
+			#createManifestEditorWindow "$1"
 			#createCodeEditorWindow "$1"
 			#createLayoutEditorWindow "$1"
 			#createValuesEditorWindow "$1"

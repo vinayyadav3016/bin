@@ -29,7 +29,7 @@ LIB_DIR="/home/robot/libs/"
 ## file sendor
 BIN=rsync
 ## optargs
-TEMP=`getopt -o blmre::p: --long binaries,libs,manifest,roslaunch,extra::,project:,  -- "$@"`
+TEMP=`getopt -o hblmre::p: --long binaries,libs,manifest,roslaunch,extra::,project:,  -- "$@"`
 eval set -- "$TEMP"
 ## default settings
 B=0;L=0;M=0;R=0;E=0
@@ -76,7 +76,7 @@ done
 if [[ -d "$HOST_DIR" ]]
 then
   echo "Deploying project : $PROJECT"
-  REMOTE_DIR=${REMOTE_DIR}/$(echo $HOST_DIR} | cut -d/ -f6- )
+  REMOTE_DIR=${REMOTE_DIR}/$(echo ${HOST_DIR} | cut -d/ -f6- )
   if [[ "$M" = 1 ]];
   then
     echo "Deploying manifest file."

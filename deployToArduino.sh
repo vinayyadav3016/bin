@@ -24,7 +24,7 @@ DEVICE=atmega328p
 PORT=/dev/ttyACM0
 BAUDRATE=115200
 UPLOADER=arduino
-TEMP=`getopt -o f:d:b:p:u: --long flash:,device:,baudrate:,port:,uploader:  -- "$@"`
+TEMP=`getopt -o f:d:b:p:u:h --long flash:,device:,baudrate:,port:,uploader:  -- "$@"`
 eval set -- "$TEMP"
 while true
 do
@@ -52,6 +52,9 @@ do
     --)
       shift;
       break;;
+    -h)
+      echo " usage : -f flash -p port -d device -b buadrate -u uploader -h for help"
+      exit 0;;
     *)
      exit 0
   esac
