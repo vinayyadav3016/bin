@@ -1,9 +1,9 @@
 #!/bin/bash - 
 #===============================================================================
 #
-#          FILE: mounthdd.sh
+#          FILE: leds_down.sh
 # 
-#         USAGE: ./mounthdd.sh 
+#         USAGE: ./leds_down.sh 
 # 
 #   DESCRIPTION: 
 # 
@@ -13,11 +13,17 @@
 #         NOTES: ---
 #        AUTHOR: YOUR NAME (), 
 #  ORGANIZATION: 
-#       CREATED: Sunday 15 March 2015 21:34
+#       CREATED: 07/31/2015 18:05
 #      REVISION:  ---
 #===============================================================================
 
 set -o nounset                              # Treat unset variables as an error
-IP=169.254.125.20
-sudo mount -o soft,intr,rsize=8192,wsize=8192 $IP:/nfs ~/nfs/
+#!/bin/bash
+brightness=$(cat "/sys/class/leds/asus::kbd_backlight/brightness")
+a=$((brightness-1))
+
+if [ "$brightness" -gt 0 ]
+then
+  echo $a >> /sys/class/leds/asus\:\:kbd_backlight/brightness
+fi
 
