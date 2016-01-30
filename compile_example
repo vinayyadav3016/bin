@@ -5,4 +5,4 @@ set -o nounset                              # Treat unset variables as an error
 cppname=$(basename $1)
 output=`echo ${cppname} | cut -d. -f1`
 
-g++ $1 -g -o ~/programming/${output}
+g++ $1 -g -o ~/programming/${output} -std=c++11
