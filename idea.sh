@@ -1,1 +1,0 @@
-/home/vinay/packages/idea-IC-141.1532.4/bin/idea.sh

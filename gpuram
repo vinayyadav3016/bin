@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+optirun -b none nvidia-settings -q UsedDedicatedGPUMemory -t -c :8
+#turnoffgpu

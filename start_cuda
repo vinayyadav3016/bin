@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+path=/home/vinay/projects/cuda/NVIDIA_CUDA-7.5_Samples/bin/x86_64/linux/release/deviceQuery
+cuda()
+{
+    optirun --no-xorg $1
+}
+cuda $path

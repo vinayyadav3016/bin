@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+optirun -b none nvidia-settings -q GPUCoreTemp -t -c :8
+#turnoffgpu
