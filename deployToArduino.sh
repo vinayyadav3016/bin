@@ -70,7 +70,8 @@ then
     echo "Port     : $PORT"
     echo "Baudrate : $BAUDRATE"
     echo "Uploader : $UPLOADER"
-    avrdude -C/usr/share/arduino/hardware/tools/avrdude.conf\
+    #avrdude -C/usr/share/arduino/hardware/tools/avrdude.conf\
+    avrdude -C/usr/share/arduino/hardware/tools/avr/etc/avrdude.conf\
       -p$DEVICE -c$UPLOADER -P$PORT -b$BAUDRATE -D -Uflash:w:$HEX_FILE:i
   else
     echo "File $HEX_FILE do not exist"
