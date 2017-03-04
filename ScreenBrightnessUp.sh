@@ -18,12 +18,12 @@
 #===============================================================================
 
 set -o nounset                              # Treat unset variables as an error
-#!/bin/bash
+
 brightness=$(cat "/sys/class/backlight/intel_backlight/brightness")
 a=$((brightness+5))
 
 if [ "$brightness" -lt 100 ]
 then
-  echo $a >> /sys/class/backlight/intel_backlight/brightness
+	echo $a >> /sys/class/backlight/intel_backlight/brightness
 fi
 

@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
-turn_off()
-{
-    #
-    sudo rmmod nvidia-uvm nvidia 2> /dev/null
-    #
-    sudo tee <<<OFF /proc/acpi/bbswitch
+turn_off() {
+	#
+	sudo rmmod nvidia-uvm nvidia 2> /dev/null
+	#
+	sudo tee <<<OFF /proc/acpi/bbswitch
 }
 turn_off

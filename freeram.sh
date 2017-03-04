@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-PrintUsage(){
+PrintUsage() {
 	echo -e "No input is given for cleanup"
 	echo -e "freeram.sh number"
 	echo -e "\t1: drop pagecache"
