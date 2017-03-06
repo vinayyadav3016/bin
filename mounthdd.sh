@@ -19,4 +19,4 @@
 
 set -o nounset                              # Treat unset variables as an error
 IP=192.168.0.102
-sudo mount -o soft,intr,rsize=8192,wsize=8192 $IP:/nfs ~/nfs/
+sudo mount -o soft,intr,rsize=8192,wsize=8192 $IP:/nfs/Public/ ~/nfs/
